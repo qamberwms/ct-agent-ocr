@@ -1,7 +1,10 @@
 services:
   - type: web
-    name: ct-agent-lite
+    name: ct-agent-ocr  # 你可以保持和你的 GitHub 仓库名称一致
     env: python
-    plan: free
+    plan: free  # 使用免费层
+    runtime: python3.9  # 指定 Python 版本，建议使用 Python 3.9 或 3.10
     buildCommand: pip install -r requirements.txt
     startCommand: uvicorn app:app --host 0.0.0.0 --port $PORT
+
+
