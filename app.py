@@ -158,3 +158,4 @@ async def summarize(file: UploadFile = File(...)):
 @app.get("/")
 def root():
     return PlainTextResponse("CT Agent OCR online. POST /summarize with form-data file=@trial.pdf")
+
